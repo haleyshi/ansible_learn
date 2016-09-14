@@ -1,0 +1,14 @@
+[web]
+192.168.33.20
+[db]
+192.168.33.30 ansible_ssh_user=vagrant ansible_ssh_pass=vagrant
+
+[dc1:children]
+web
+
+[dc1:vars]
+ansible_ssh_user=vagrant
+ansible_ssh_pass=vagrant
+
+[dc2:children]
+db
