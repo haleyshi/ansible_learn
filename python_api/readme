@@ -1,0 +1,4 @@
+#Install shade on target node [controller]
+pip install shade
+
+
