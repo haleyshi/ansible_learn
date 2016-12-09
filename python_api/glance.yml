@@ -1,0 +1,17 @@
+---
+
+- hosts: 10.20.0.3
+  gather_facts: no
+  tasks:
+    - name: Gather facts about a previously created image named TestVM
+      os_image_facts:
+        auth:
+          auth_url: http://192.168.0.2:5000/
+          username: admin
+          password: admin
+          project_name: admin
+        image: TestVM
+
+    - name: Show openstack facts
+      debug:
+        var: openstack_image
