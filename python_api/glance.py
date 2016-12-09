@@ -264,6 +264,7 @@ if __name__ == '__main__':
                 }
 
     rbt = ANSRunner(resource)  #resource可以是列表或者字典形式，如果做了ssh-key认证，就不会通过账户密码方式认证
-    rbt.run_playbook(["10.20.0.3"],playbook_path='/root/sanity/glance.yml')
+    pbdir = os.path.join(os.path.dirname(__file__), 'glance.yml')
+    rbt.run_playbook(["10.20.0.3"],playbook_path=pbdir)
     data = rbt.get_playbook_result()
     print data

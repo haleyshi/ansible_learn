@@ -12,6 +12,6 @@
           project_name: admin
         image: TestVM
 
-    - name: Show openstack facts
-      debug:
-        var: openstack_image
+#    - name: Show openstack facts
+#      debug:
+#        var: openstack_image

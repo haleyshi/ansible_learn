@@ -264,6 +264,6 @@ if __name__ == '__main__':
                 }
 
     rbt = ANSRunner(resource)  #resource可以是列表或者字典形式，如果做了ssh-key认证，就不会通过账户密码方式认证
-    rbt.run_playbook(["10.20.0.2", "10.20.0.3", "10.20.0.4", "10.20.0.5"],playbook_path='/root/sanity/ping4.yml')
+    rbt.run_playbook(["10.20.0.2", "10.20.0.3", "10.20.0.4", "10.20.0.5"],playbook_path='ping4.yml')
     data = rbt.get_playbook_result()
     print data
